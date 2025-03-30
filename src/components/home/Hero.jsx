@@ -30,14 +30,15 @@ export default function HomeSwiper() {
     //     getHomeData();
 
     // }, []);
+    const videoURl = "@/public/videos/1.webm" 
     const data = [
-        { description: "", id: 7, image: null, name: "Banner 1", type: "video", url: "https://www.google.com", video: "https://rr1---sn-5hnekn7z.googlevideo.com/videoplayback?expire=1743321348&ei=pKToZ5jTG9_k4t4Pk_Sw0QI&ip=103.35.134.244&id=o-AIM-VgQ3iOnkWoPtIoZJoWlJy1T9lmMie_D4QUMDfM9J&itag=247&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C278&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&bui=AccgBcPqLFomt_zSR7X7Ath3hIrkieR4RxG24UoVHr9hqPWCHwDLn51X8QoGQRDxzFGEbmmvYGuH_b2B&vprv=1&svpuc=1&mime=video%2Fwebm&ns=aVScgE5hjbC2u9p6yGk75QcQ&rqh=1&gir=yes&clen=2701642&dur=25.509&lmt=1735782460603109&keepalive=yes&lmw=1&c=TVHTML5&sefc=1&txp=2219224&n=drPPHCTC2pWOzw&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRgIhAKLxLn7-pWzyNosJ2IRa-jGPT2JTjradzgbCUChAmyqfAiEAhf6EgOlz6DclvFkbUeHQq6AG-OVEbHq2337603RIGj4%3D&rm=sn-aphxgpj3-2o9e7l,sn-cvh677e&rrc=79,104&fexp=24350590,24350737,24350827,24350961,24351147,24351173,24351283,24351353,24351398,24351415,24351421,24351423,24351469,24351525,24351528,24351531&req_id=16e9bd1945f7a3ee&cmsv=e&rms=rdu,au&redirect_counter=2&cms_redirect=yes&ipbypass=yes&met=1743299768,&mh=eh&mip=51.158.253.130&mm=29&mn=sn-5hnekn7z&ms=rdu&mt=1743299343&mv=m&mvi=1&pl=21&lsparams=ipbypass,met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=AFVRHeAwRAIgUckKmXSUKo85vs4PipFCzzwfZ5K4zBEjJaJ6owAbWKYCICAsKo2BAs4h91Az1xo4r6uH1TAypAjxYsb7O1glvjij"},
-                { description: "", id: 7, image: img1, name: "Banner 1", type: "image", url: "https://www.google.com", video: null },
+        { description: "", id: 7, image: null, name: "Banner 1", type: "video", url: "https://www.google.com", video: "https://www.w3schools.com/html/mov_bbb.mp4" },
+        { description: "", id: 7, image: img1, name: "Banner 1", type: "image", url: "https://www.google.com", video: null },
         { description: "", id: 7, image: img2, name: "Banner 1", type: "image", url: "https://www.google.com", video: null },
     ]
 
     return (
-        <div className="container home-slider" style={{direction: 'ltr'}}>
+        <div className="container home-slider" style={{ direction: 'ltr' }}>
             <Swiper
                 // navigation
                 pagination={{ type: "bullets", clickable: true }}
@@ -80,7 +81,7 @@ export default function HomeSwiper() {
                                     <div className="slide-img">
                                         {img.type == "video" ?
                                             <video width="320" height="240" muted autoPlay={"autoplay"}>
-                                                <source src={img.video} type="video/mp4" />
+                                                <source src={img.video} type="video/webm" />
                                                 <source src={img.video} type="video/ogg" />
                                             </video> :
                                             <>
@@ -91,7 +92,7 @@ export default function HomeSwiper() {
                                     : <div className="slide-img">
                                         {img.type == "video" ?
                                             <video width="320" height="240" muted loop={true} autoPlay={"autoplay"}>
-                                                <source src={img.video} type="video/mp4" />
+                                                <source src={img.video} type="video/webm" />
                                                 <source src={img.video} type="video/ogg" />
                                             </video> :
                                             <Image src={img.image} width={100} height={100} alt='Loops' />
