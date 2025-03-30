@@ -44,7 +44,7 @@ export default function UpperNavBar() {
                     <Select onValueChange={(e) => {
                         localStorage.setItem('lang', e);
                         window.location.reload();
-                    }} defaultValue={localStorage.getItem('lang')}>
+                    }} defaultValue={lang}>
                         <SelectTrigger className="w-[55px]" >
                             <Image src={global} alt='global'></Image>
                             <SelectValue placeholder="Select type" />
