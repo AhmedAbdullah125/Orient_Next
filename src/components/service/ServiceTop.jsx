@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'; // Importing React to use JSX syntax and create components.
-import img1 from '/public/images/det-services/1.jpg'
+import img1 from '/public/images/detservices/1.jpg'
 
 export default function ServiceTop() { // Defining the main functional component named 'Footer'.
     const lang = localStorage.getItem('lang')

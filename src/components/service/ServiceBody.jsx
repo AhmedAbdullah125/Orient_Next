@@ -2,12 +2,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import img1 from '/public/images/det-services/1.jpg'
-import img2 from '/public/images/det-services/2.jpg'
-import img3 from '/public/images/det-services/3.jpg'
-import img4 from '/public/images/det-services/4.jpg'
-import img5 from '/public/images/det-services/5.jpg'
-import img6 from '/public/images/det-services/6.jpg'
+import img1 from '/public/images/detservices/1.jpg'
+import img2 from '/public/images/detservices/2.jpg'
+import img3 from '/public/images/detservices/3.jpg'
+import img4 from '/public/images/detservices/4.jpg'
+import img5 from '/public/images/detservices/5.jpg'
+import img6 from '/public/images/detservices/6.jpg'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Autoplay } from 'swiper/modules'
