@@ -19,18 +19,22 @@ import axios from 'axios'
 import { useRouter } from 'next/navigation'
 
 export default function NavBar() {
-  const [token, setToken] = useState(localStorage.getItem('token'));
   const router = useRouter();
   const [searchData, setSearchData] = useState([]);
   const [selectedCat, setSelectedCat] = useState('toys');
   const [loading, setLoading] = useState(false);
-  const [lang, setLang] = useState('en');
-
+  const [lang, setLang] = useState('en')
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setLang(localStorage.getItem('lang') || 'en');
+      if (localStorage.getItem('lang') === 'ar' || localStorage.getItem('lang') === 'en') {
+        setLang(localStorage.getItem('lang'));
+      }
+      else {
+        localStorage.setItem('lang', 'en');
+        setLang('en');
+      }
     }
-  }, []);
+  })
 
   const sendSearchRequest = async () => {
     setLoading(true);

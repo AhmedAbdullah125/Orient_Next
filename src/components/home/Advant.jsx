@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import img1 from '/public/images/about/muslim.jpg'
 import img2 from '/public/images/about/plane2.png'
@@ -11,7 +11,18 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 
 export default function Services() {
-  const lang = typeof window !== 'undefined' ? localStorage.getItem('lang') : 'en'
+  const [lang, setLang] = useState('en')
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if (localStorage.getItem('lang') === 'ar' || localStorage.getItem('lang') === 'en') {
+        setLang(localStorage.getItem('lang'));
+      }
+      else {
+        localStorage.setItem('lang', 'en');
+        setLang('en');
+      }
+    }
+  })
 
   const slides = [
     {

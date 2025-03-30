@@ -1,14 +1,23 @@
 'use client'
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react'; // Importing React to use JSX syntax and create components.
+import React, { useEffect, useState } from 'react'; // Importing React to use JSX syntax and create components.
 import img1 from '/public/images/services/umrah.png'
 import img2 from '/public/images/services/hotel.png'
 import img3 from '/public/images/services/car.jpg'
 import img4 from '/public/images/services/plane.png'
 
 export default function Services() { // Defining the main functional component named 'Footer'.
-    const lang = localStorage.getItem('lang')
+    const [lang, setLang] = useState('en');  // Default language is 'en'
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setLang(localStorage.getItem('lang'));
+            // Define the headers with the selected language
+            const headers = {
+                lang: localStorage.getItem('lang'), // Change language dynamically based on state
+            };
+        }
+    }, []);
 
     return (
         <div className="services" id="services" style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>

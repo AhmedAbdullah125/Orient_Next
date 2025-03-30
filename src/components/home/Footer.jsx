@@ -10,7 +10,18 @@ import logo from '../../../src/assets/images/home/logo.png'
 
 
 export default function Footer() { // Defining the main functional component named 'Footer'.
-    const lang = localStorage.getItem('lang')
+    const [lang, setLang] = useState('en')
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            if (localStorage.getItem('lang') === 'ar' || localStorage.getItem('lang') === 'en') {
+                setLang(localStorage.getItem('lang'));
+            }
+            else {
+                localStorage.setItem('lang', 'en');
+                setLang('en');
+            }
+        }
+    })
     // const [loading, setLoading] = useState(true); // State for loading indicator
     // const [data, setData] = useState(null);
     // const [contactData, setContactData] = useState(null);
@@ -80,8 +91,8 @@ export default function Footer() { // Defining the main functional component nam
                         <h3>{lang === 'ar' ? 'اتصل بنا' : 'Contact Us'}</h3>
                         <ul>
                             <li ><Link href={`tel:01010010100101001`} >+96555555555555555</Link></li>
-                            <li ><Link href={ `mailto:orient@gmail` } >orient@gmail.com</Link></li>
-                            <li ><Link href={ "#footer"} className='address'>Riyadh KSA</Link></li>
+                            <li ><Link href={`mailto:orient@gmail`} >orient@gmail.com</Link></li>
+                            <li ><Link href={"#footer"} className='address'>Riyadh KSA</Link></li>
                         </ul>
                     </div>
                     <div className="links">
