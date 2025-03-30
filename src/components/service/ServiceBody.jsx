@@ -1,0 +1,94 @@
+'use client'
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import img1 from '/public/images/det-services/1.jpg'
+import img2 from '/public/images/det-services/2.jpg'
+import img3 from '/public/images/det-services/3.jpg'
+import img4 from '/public/images/det-services/4.jpg'
+import img5 from '/public/images/det-services/5.jpg'
+import img6 from '/public/images/det-services/6.jpg'
+
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Autoplay } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/pagination'
+
+export default function ServiceBody() {
+    const lang = typeof window !== 'undefined' ? localStorage.getItem('lang') : 'en'
+
+    const packages = [
+        { title: 'Silver Ummrah Package', price: 'KD 450', offer: '10% Off', details: 'Includes 3-star hotel, flight, and transport.' },
+        { title: 'Gold Ummrah Package', price: 'KD 620', offer: 'Limited Offer', details: 'Includes 4-star hotel, guided tours, meals, and flights.' },
+        { title: 'Platinum Ummrah Package', price: 'KD 850', offer: 'Best Value', details: '5-star hotel, private transport, full board meals & flight.' },
+    ]
+
+    return (
+        <div className="container changed-container" style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
+            <div className="plan-main plan-main-details">
+                <div className="l-side">
+                    <div className="title-price">
+                        <div className="title">
+                            <h4>Ummrah Services</h4>
+                            <div className="stars-reviews-cont">
+                                <div className="stars">
+                                    <i className="fa-solid fa-star"></i>
+                                    <i className="fa-solid fa-star"></i>
+                                    <i className="fa-solid fa-star"></i>
+                                    <i className="fa-solid fa-star"></i>
+                                    <i className="fa-solid fa-star"></i>
+                                </div>
+                                <span>(2.3k review)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p className="discripton">
+                        🌟 Discover Hassle-Free Ummrah Services with Orient 🌟<br />
+                        Embark on a spiritual journey with confidence and peace of mind through our tailored Ummrah
+                        packages... Contact us today to plan your Ummrah trip and experience excellence in every step! 🕋✈️
+                    </p>
+                    <div className="packages">
+                        <Swiper
+                            modules={[Pagination, Autoplay]}
+                            spaceBetween={20}
+                            slidesPerView={3}
+                            pagination={{ clickable: true }}
+                            autoplay={{ delay: 3000 }}
+                            className='swiperPackages'
+                            breakpoints={{
+                                0: {
+                                    slidesPerView: 1,
+                                },
+                                768: {
+                                    slidesPerView: 2,
+                                },
+                                1024: {
+                                    slidesPerView: 3,
+                                },
+                            }}
+                        >
+                            {packages.map((pkg, index) => (
+                                <SwiperSlide key={index}>
+                                    <div className="package-card">
+                                        <h4>{pkg.title}</h4>
+                                        <p className="price">{pkg.price}</p>
+                                        <span className="offer">{pkg.offer}</span>
+                                        <p className="details">{pkg.details}</p>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
+                    <h3>From our gallery</h3>
+                    <div className="imgs-cont">
+                        {[img1, img2, img3, img4, img5, img6].map((img, i) => (
+                            <Link key={i} data-fancybox="gallery" href={img.src} className="img-cont">
+                                <Image src={img} alt={`Saudi-Arabia-${i}`} data-caption={`Caption #${i + 1}`} />
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}

@@ -1,0 +1,364 @@
+.advantages {
+    padding-bottom: 100px;
+    padding-top: 91px;
+    overflow: hidden;
+}
+
+.advantages-cont {
+    display: flex;
+    gap: 30px;
+    transition: all .3s ease-in-out !important;
+    *{
+        transition: all .3s ease-in-out !important;
+    }
+}
+
+
+
+.advantages-cont .l-side {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+    @media screen and (max-width: 991px) {
+        width: 100%;
+        
+    }
+}
+.advantages-cont .r-side {
+    width: 50%;
+    @media screen and (max-width: 991px) {
+        width: 100%;
+        
+    }
+}
+
+h2 {
+    font-size: 18px;
+    color: #DF6951;
+    font-weight: 600;
+}
+
+h3 {
+    color: #181E4B;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.advantages-cont .l-side .swiperAdvantages {
+    height: 300px;
+    overflow: hidden;
+}
+
+.swiperAdvantages .advantage {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+}
+.swiperAdvantages{
+    width: 100%;
+}
+.swiperAdvantages .advantage .icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DF6951;
+    border-radius: 8px;
+}
+
+.advantage .icon i {
+    font-size: 22px;
+    color: $white;
+}
+
+.advantages-cont .swiper-wrapper .swiper-slide:nth-child(1) .icon {
+    background-color: #181E4B;
+}
+
+.advantages-cont .swiper-wrapper .swiper-slide:nth-child(2) .icon {
+    background-color: #DF6951;
+}
+
+.advantages-cont .swiper-wrapper .swiper-slide:nth-child(3) .icon {
+    background-color: #006380;
+}
+
+.advantages-cont .swiper-wrapper .swiper-slide:nth-child(4) .icon {
+    background-color: brown;
+}
+
+.advantage .text h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    padding: 0;
+
+}
+
+.advantage .text p {
+    max-width: 320px;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.advantages-cont .r-side .trip-card {
+    padding: 20px 25px 30px;
+    border-radius: 26px;
+    box-shadow: 0px 0px 100px rgba($color: #59B1E6, $alpha: .5);
+    max-width: 400px;
+    position: relative;
+    background-color: $white;
+}
+
+.advantages-cont .r-side .trip-card .dots {
+    position: absolute;
+    z-index: -1;
+    bottom: -53px;
+    inset-inline-start: -76px;
+    transform: rotate(90deg);
+}
+
+.palnee {
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    inset-inline-end: -250px;
+}
+
+.advantages-cont .r-side .trip-card:hover .palnee {
+    transform: translate(50px, 50px);
+}
+
+.advantages-cont .r-side .trip-card .img-cont {
+    width: 100%;
+    aspect-ratio: 2/1;
+    overflow: hidden;
+    border-radius: 26px;
+    margin-bottom: 26px;
+}
+
+.r-side .trip-card .img-cont img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.advantages-cont .r-side .trip-card h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 13px;
+    padding: 0;
+}
+
+.advantages-cont .r-side .trip-card p {
+    color: #84829A;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 21px;
+}
+
+.advantages-cont .r-side .trip-card .ies {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.advantages-cont .ies i {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F5F5;
+    border-radius: 50%;
+    color: #84829A;
+}
+
+.advantages-cont .intersts {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.advantages-cont .intersts i,
+span {
+    font-size: 16px;
+    font-weight: 400;
+    color: #84829A;
+}
+
+@media (max-width: 1200px) {
+    .advantages-cont {
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .advantages-cont .l-side {
+        order: 2;
+    }
+
+    .advantages-cont .l-side h3 {
+        font-size: 32px;
+    }
+
+    .advantages-cont .r-side {
+        order: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 100px;
+    }
+
+    .advantages-cont .l-side {
+        align-items: center;
+    }
+}
+
+@media (max-width: 991px) {
+    .palnee {
+        position: absolute;
+        z-index: -1;
+        top: 0px;
+        inset-inline-end: -100px;
+    }
+
+    .advantages-cont .r-side .trip-card .palnee {
+        img {
+            transform: rotate(300deg);
+        }
+    }
+
+    .advantages-cont .r-side .trip-card:hover .palnee {
+        transform: translate(50px, -50px);
+    }
+
+}
+
+@media (max-width: 767px) {
+    .advantages-cont {
+        grid-template-columns: 1fr;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .advantages-cont .l-side h3 {
+        font-size: 20px;
+    }
+
+    .advantages-cont .r-side {
+        order: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 100px;
+    }
+
+    .advantages-cont .l-side {
+        align-items: flex-start;
+    }
+
+    .advantages-cont .r-side .trip-card:hover .palnee {
+        transform: translate(50px, -50px);
+    }
+
+    .advantages-cont .r-side .trip-card .palnee {
+        img {
+            transform: rotate(300deg);
+        }
+    }
+
+    .advantages-cont .r-side .trip-card .palnee img {
+        transform: rotate(284deg);
+    }
+}
+
+.fasel {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.fasel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fasel .over {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba($color: #000, $alpha: .4);
+}
+
+.fasel .over .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.fasel .over .container p {
+    font-size: 50px;
+    font-weight: 600;
+    color: $white;
+}
+
+.fasel .over .p-cont {
+    position: relative;
+    max-width: 550px;
+}
+
+.fasel .over .p-cont img {
+    position: absolute;
+    max-width: 312px;
+    max-height: 41px;
+    object-fit: cover;
+    bottom: -22px;
+    inset-inline-end: 30px;
+    transform: rotate(5deg);
+}
+
+@media (max-width: 991px) {
+    .fasel .over .container p {
+        font-size: 32px;
+    }
+
+    .fasel .over .p-cont {
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 450px) {
+    .fasel .over .container p {
+        font-size: 22px;
+    }
+
+    .fasel .over .p-cont {
+        max-width: 80%;
+    }
+
+    .fasel .over .p-cont img {
+        max-width: 156px;
+        max-height: 20px;
+    }
+}
