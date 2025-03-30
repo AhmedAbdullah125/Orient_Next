@@ -577,12 +577,13 @@ ul.breadcrumb li a:hover {
   }
 }
 
-.logo {
+header .logo {
   width: auto;
   height: auto;
+  max-height: 50px;
 }
 @media screen and (max-width: 767px) {
-  .logo {
+  header .logo {
     width: 70px;
   }
 }
