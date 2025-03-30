@@ -2048,7 +2048,7 @@ footer .served {
 }
 
 .advantages-cont .r-side {
-  width: 50%;
+  width: calc(50% - 30px);
 }
 @media screen and (max-width: 991px) {
   .advantages-cont .r-side {
