@@ -580,7 +580,6 @@ ul.breadcrumb li a:hover {
 .logo {
   width: auto;
   height: auto;
-  max-height: 50px;
 }
 @media screen and (max-width: 767px) {
   .logo {
@@ -2028,7 +2027,6 @@ footer .served {
 .advantages-cont {
   display: flex;
   gap: 30px;
-  flex-wrap: wrap;
   transition: all 0.3s ease-in-out !important;
 }
 .advantages-cont * {
