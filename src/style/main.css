@@ -2026,6 +2026,7 @@ footer .served {
 
 .advantages-cont {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   transition: all 0.3s ease-in-out !important;
 }

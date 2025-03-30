@@ -6,6 +6,7 @@
 
 .advantages-cont {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     transition: all .3s ease-in-out !important;
     *{
@@ -252,6 +253,7 @@ span {
         grid-template-columns: 1fr;
         align-items: flex-start;
         justify-content: center;
+
     }
 
     .advantages-cont .l-side h3 {
