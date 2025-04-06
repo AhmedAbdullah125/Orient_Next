@@ -2,7 +2,7 @@
 import Reac, { useEffect, useState } from 'react';
 import MazarInfo from './MazarInfo';
 import FormPage from './FormPage';
-import img1 from '/public/images/a9.jpg'
+import img1 from '/public/images/shake.png'
 
 
 export default function Contact() {
