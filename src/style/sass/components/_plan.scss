@@ -48,7 +48,6 @@
         height: auto !important;
     }
 }
-
 .package-card {
     transition: all 0.3s ease !important;
     background-color: #f9f9f9;
@@ -59,6 +58,7 @@
     transition: transform 0.3s ease;
     height: 100%;
     display: block;
+    
 }
 
 .package-card:hover {
