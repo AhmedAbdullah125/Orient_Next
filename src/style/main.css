@@ -1918,7 +1918,7 @@ footer .served {
 }
 
 .services {
-  padding: 110px 0 50px;
+  padding: 32px 0 50px;
   overflow: hidden;
 }
 
@@ -3038,7 +3038,7 @@ textarea {
 }
 @media (max-width: 767px) {
   .services h2 {
-    font-size: 45px;
+    font-size: 32px;
   }
   .about .r-side h3 {
     font-size: 40px;
