@@ -20,22 +20,22 @@ export default function ServiceBody() {
     const packages = [
         {
             title: 'Silver Ummrah Package',
-            oldPrice: 'KD 500',
-            newPrice: 'KD 450',
+            oldPrice: '$ 500',
+            newPrice: '$ 450',
             offer: '10% Off',
             details: 'Includes 3-star hotel, flight, and transport.'
         },
         {
             title: 'Gold Ummrah Package',
-            oldPrice: 'KD 680',
-            newPrice: 'KD 620',
+            oldPrice: '$ 680',
+            newPrice: '$ 620',
             offer: 'Limited Offer',
             details: 'Includes 4-star hotel, guided tours, meals, and flights.'
         },
         {
             title: 'Platinum Ummrah Package',
-            oldPrice: 'KD 950',
-            newPrice: 'KD 850',
+            oldPrice: '$ 950',
+            newPrice: '$ 850',
             offer: 'Best Value',
             details: '5-star hotel, private transport, full board meals & flight.'
         },

@@ -104,7 +104,7 @@ export default function NavBar() {
                       </div>
                       <div className="text">
                         <h2>{item.name}</h2>
-                        <h3>{item.price} {t('K.D', 'د.ك')}</h3>
+                        <h3>{item.price} $</h3>
                       </div>
                     </Link>
                   ))
