@@ -57,6 +57,10 @@
         display: flex;
         align-items: center;
         gap: 16px;
+        @media screen and (max-width: 767px) {
+            gap: 10px;
+            
+        }
         button{
             min-width: 60px;
             transition: none !important;

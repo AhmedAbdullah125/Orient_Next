@@ -10,10 +10,10 @@ import Marquee from '../ui/marquee';
 import { cn } from '@/lib/utils';
 
 export default function Parteners() {
-    const [language, setLanguage] = useState('en');  // Default language is 'en'
+    const [lang, setLang] = useState('en');  // Default language is 'en'
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            setLanguage(localStorage.getItem('lang'));
+            setLang(localStorage.getItem('lang'));
             // Define the headers with the selected language
             const headers = {
                 lang: localStorage.getItem('lang'), // Change language dynamically based on state
@@ -39,7 +39,7 @@ export default function Parteners() {
     let parts = [{ img: part1.src }, { img: part2 }, { img: part3 }, { img: part4 },  { img: part5 }, ];
     
     return (
-        <div className="parteners" style={{ direction: language === 'en' ? 'ltr' : 'rtl' }}>
+        <div className="parteners" style={{ direction: lang === 'en' ? 'ltr' : 'rtl' }}>
             {/* <div className="container m-auto">
                 <h2>{language === 'en' ? 'Accredited by':'معتمدون لدى'  }</h2>
             </div> */}
