@@ -1,51 +1,25 @@
-'use client'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
-import img1 from '/public/images/about/muslim.jpg'
+import img1 from '/public/images/logo.png'
 import img2 from '/public/images/about/plane2.png'
 import img3 from '/public/images/about/dots.png'
 
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Autoplay } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/pagination'
 
 export default function Advant() {
-  const [lang, setLang] = useState('en')
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      if (localStorage.getItem('lang') === 'amh' || localStorage.getItem('lang') === 'en') {
-        setLang(localStorage.getItem('lang'));
-      }
-      else {
-        localStorage.setItem('lang', 'en');
-        setLang('en');
-      }
-    }
-  })
+  // const [lang, setLang] = useState('en')
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     if (localStorage.getItem('lang') === 'amh' || localStorage.getItem('lang') === 'en') {
+  //       setLang(localStorage.getItem('lang'));
+  //     }
+  //     else {
+  //       localStorage.setItem('lang', 'en');
+  //       setLang('en');
+  //     }
+  //   }
+  // })
 
-  const slides = [
-    {
-      icon: 'fa-person-walking-luggage',
-      title: 'Choose Destination',
-      desc: 'Orient will help you easily choose your destination. Quickly go and find out your next destination.',
-    },
-    {
-      icon: 'fa-sliders',
-      title: 'Diversity',
-      desc: "See what's available at your next trip. If you're looking to travel, enter your data to check available directions.",
-    },
-    {
-      icon: 'fa-meteor',
-      title: 'Flexibility',
-      desc: "In today's fast world, speed is essential—from adapting to change to seizing new opportunities.",
-    },
-    {
-      icon: 'fa-money-bill-transfer',
-      title: 'Good Prices',
-      desc: 'Opportunities are rare. When they come, seize the moment and don’t waste the chance.',
-    },
-  ]
+  
 
   return (
     <div className="advantages">
@@ -55,31 +29,13 @@ export default function Advant() {
           <div className="l-side">
             <h2>Orient</h2>
             <h3>Get Your Favourite Resort Bookings</h3>
-
-            <Swiper
-              modules={[Pagination, Autoplay]}
-              spaceBetween={20}
-              slidesPerView={3}
-              pagination={false}
-              autoplay={{ delay: 5000 }}
-              className='swiperAdvantages'
-              //vertical
-              direction='vertical'
-            >
-              {slides.map((item, index) => (
-                <SwiperSlide key={index}>
-                  <div className="advantage">
-                    <div className="icon">
-                      <i className={`fa-solid ${item.icon}`}></i>
-                    </div>
-                    <div className="text">
-                      <h4>{item.title}</h4>
-                      <p>{item.desc}</p>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+            <p>
+              Orient is a leading travel company that offers a wide range of
+              services, including hotel reservations, flight tickets, and car
+              rentals. Our team of experienced professionals is dedicated to
+              helping you find the perfect accommodations, transportation, and
+              travel options for your next trip.
+            </p>
           </div>
 
           {/* Right side with static trip card */}

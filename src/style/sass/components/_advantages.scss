@@ -7,6 +7,7 @@
 .advantages-cont {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 30px;
     transition: all .3s ease-in-out !important;
     *{
@@ -35,14 +36,14 @@
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 32px;
     color: #DF6951;
     font-weight: 600;
 }
 
 h3 {
     color: #181E4B;
-    font-size: 50px;
+    font-size: 24px;
     font-weight: 600;
     margin-bottom: 15px;
 }
@@ -152,7 +153,7 @@ h3 {
 .r-side .trip-card .img-cont img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .advantages-cont .r-side .trip-card h2 {
@@ -185,6 +186,10 @@ h3 {
     background-color: #F5F5F5;
     border-radius: 50%;
     color: #84829A;
+    &:hover {
+        background-color: #DF6951;
+        color: $white;
+    }
 }
 
 .advantages-cont .intersts {
