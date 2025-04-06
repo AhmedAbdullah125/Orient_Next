@@ -87,7 +87,7 @@ export default function ServiceBody() {
                         >
                             {packages.map((pkg, index) => (
                                 <SwiperSlide key={index}>
-                                    <div className="package-card">
+                                    <Link href="contact?service=Ummrah" className="package-card">
                                         <h4>{pkg.title}</h4>
                                         <div className="price-section">
                                             <p className="new-price" style={{ fontWeight: 'bold', color: '#2e8b57' }}>
@@ -99,7 +99,7 @@ export default function ServiceBody() {
                                         </div>
                                         <span className="offer">{pkg.offer}</span>
                                         <p className="details">{pkg.details}</p>
-                                    </div>
+                                    </Link>
                                 </SwiperSlide>
                             ))}
                         </Swiper>
