@@ -18,13 +18,31 @@ export default function ServiceBody() {
     const lang = typeof window !== 'undefined' ? localStorage.getItem('lang') : 'en'
 
     const packages = [
-        { title: 'Silver Ummrah Package', price: 'KD 450', offer: '10% Off', details: 'Includes 3-star hotel, flight, and transport.' },
-        { title: 'Gold Ummrah Package', price: 'KD 620', offer: 'Limited Offer', details: 'Includes 4-star hotel, guided tours, meals, and flights.' },
-        { title: 'Platinum Ummrah Package', price: 'KD 850', offer: 'Best Value', details: '5-star hotel, private transport, full board meals & flight.' },
+        {
+            title: 'Silver Ummrah Package',
+            oldPrice: 'KD 500',
+            newPrice: 'KD 450',
+            offer: '10% Off',
+            details: 'Includes 3-star hotel, flight, and transport.'
+        },
+        {
+            title: 'Gold Ummrah Package',
+            oldPrice: 'KD 680',
+            newPrice: 'KD 620',
+            offer: 'Limited Offer',
+            details: 'Includes 4-star hotel, guided tours, meals, and flights.'
+        },
+        {
+            title: 'Platinum Ummrah Package',
+            oldPrice: 'KD 950',
+            newPrice: 'KD 850',
+            offer: 'Best Value',
+            details: '5-star hotel, private transport, full board meals & flight.'
+        },
     ]
 
     return (
-        <div className="container changed-container" style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
+        <div className="container changed-container">
             <div className="plan-main plan-main-details">
                 <div className="l-side">
                     <div className="title-price">
@@ -71,7 +89,14 @@ export default function ServiceBody() {
                                 <SwiperSlide key={index}>
                                     <div className="package-card">
                                         <h4>{pkg.title}</h4>
-                                        <p className="price">{pkg.price}</p>
+                                        <div className="price-section">
+                                            <p className="new-price" style={{ fontWeight: 'bold', color: '#2e8b57' }}>
+                                                {pkg.newPrice}
+                                            </p>
+                                            <p className="old-price" style={{ textDecoration: 'line-through', color: '#999' }}>
+                                                {pkg.oldPrice}
+                                            </p>
+                                        </div>
                                         <span className="offer">{pkg.offer}</span>
                                         <p className="details">{pkg.details}</p>
                                     </div>

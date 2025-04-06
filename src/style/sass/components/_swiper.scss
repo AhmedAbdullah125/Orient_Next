@@ -81,10 +81,15 @@
   }
   
   .slider-content {
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 200px;
+    max-height: 300px;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
     height: 100%;
-    // background-repeat: no-repeat;
-    // background-attachment: fixed;
-    // background-size: cover;
   
   }
   
@@ -103,16 +108,11 @@
   
   .p-on-overlay {
     color: $black;
-    font-size: 60px;
-    font-weight: 300;
-    max-width: 500px;
-    font-family: yesteryear !important;
+    font-size: 56px;
+    font-weight: 500;
+    // font-family: yesteryear !important;
   }
-  
-  .banner .p-on-overlay {
-    font-size: 80px;
-    max-width: unset;
-  }
+
   
   @media (max-width: 767px) {
     .banner .p-on-overlay {
@@ -204,7 +204,7 @@
   
   /****************** swiperPartner *****************/
   .partner {
-    direction: rtl;
+    // direction: rtl;
     background-color: #F7F7F7;
     overflow: hidden;
     position: relative;

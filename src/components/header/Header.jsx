@@ -26,7 +26,7 @@ export default function NavBar() {
   const [lang, setLang] = useState('en')
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      if (localStorage.getItem('lang') === 'ar' || localStorage.getItem('lang') === 'en') {
+      if (localStorage.getItem('lang') === 'amh' || localStorage.getItem('lang') === 'en') {
         setLang(localStorage.getItem('lang'));
       }
       else {
@@ -58,7 +58,7 @@ export default function NavBar() {
   const t = (en, ar) => lang === 'ar' ? ar : en;
 
   return (
-    <header style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
+    <header>
       <UpperNavBar />
       <div className="container m-auto">
         <div className="mainNavBar">
@@ -114,7 +114,7 @@ export default function NavBar() {
               </div>
             )}
           </div>
-          <Link href={'/services'} className="nav-card">
+          <Link href={'/#services'} className="nav-card">
             <i className="fa-solid fa-server"></i>
             <p>{t('Services', 'الخدمات')}</p>
           </Link>
@@ -131,7 +131,7 @@ export default function NavBar() {
       </div>
       <div className="fixed-nav-bar-in-mobile">
         <div className="container">
-          <Link href={'/services'} className="nav-card">
+          <Link href={'/#services'} className="nav-card">
             <i className="fa-solid fa-server"></i>
             <p>{t('Services', 'الخدمات')}</p>
           </Link>

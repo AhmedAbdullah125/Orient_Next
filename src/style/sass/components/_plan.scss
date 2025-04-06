@@ -1,8 +1,9 @@
 .banner {
     position: relative;
-    height: 70vh;
+    // height: 70vh;
     overflow: hidden;
     border-radius: 12px;
+    margin-bottom: 32px;
 }
 
 .swiper-slide {
@@ -96,12 +97,24 @@
     font-weight: 300;
 
 }
+.price-section {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
 
+.old-price {
+    font-size: 14px;
+}
+
+.new-price {
+    font-size: 22px;
+}
 .plan-main {
 
     align-items: flex-start;
     justify-content: flex-start;
-    margin-top: -100px;
+    // margin-top: -100px;
     padding: 40px;
     background-color: $white;
     position: relative;

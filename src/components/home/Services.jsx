@@ -20,7 +20,7 @@ export default function Services() { // Defining the main functional component n
     }, []);
 
     return (
-        <div className="services" id="services" style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
+        <div className="services" id="services" >
             <div className="container">
                 <h2>We Offer Best Services</h2>
                 <div className="services-cont">

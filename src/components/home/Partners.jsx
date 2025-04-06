@@ -39,7 +39,7 @@ export default function Parteners() {
     let parts = [{ img: part1.src }, { img: part2 }, { img: part3 }, { img: part4 },  { img: part5 }, ];
     
     return (
-        <div className="parteners" style={{ direction: lang === 'en' ? 'ltr' : 'rtl' }}>
+        <div className="parteners">
             {/* <div className="container m-auto">
                 <h2>{language === 'en' ? 'Accredited by':'معتمدون لدى'  }</h2>
             </div> */}

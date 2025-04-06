@@ -10,11 +10,11 @@ import { Pagination, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
-export default function Services() {
+export default function Advant() {
   const [lang, setLang] = useState('en')
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      if (localStorage.getItem('lang') === 'ar' || localStorage.getItem('lang') === 'en') {
+      if (localStorage.getItem('lang') === 'amh' || localStorage.getItem('lang') === 'en') {
         setLang(localStorage.getItem('lang'));
       }
       else {
@@ -48,12 +48,12 @@ export default function Services() {
   ]
 
   return (
-    <div className="advantages" style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
+    <div className="advantages">
       <div className="container">
         <div className="advantages-cont">
           {/* Left side with Swiper */}
           <div className="l-side">
-            <h2>Fast & Easy</h2>
+            <h2>Orient</h2>
             <h3>Get Your Favourite Resort Bookings</h3>
 
             <Swiper
@@ -89,14 +89,17 @@ export default function Services() {
                 <Image src={img1} alt="Makkah" />
               </div>
               <h2>Visit Makkah</h2>
-              <p>14-29 June | by Mohamed Ali</p>
+              <p>Orient will help you easily choose your destination</p>
               <div className="ies">
                 <i className="fa-brands fa-envira"></i>
                 <i className="fa-regular fa-map"></i>
                 <i className="fa-solid fa-location-arrow"></i>
+                <i className="fa-solid fa-plane"></i>
+                <i className="fa-solid fa-hotel"></i>
+                <i className="fa-solid fa-user-group"></i>
               </div>
               <div className="intersts">
-                <i className="fa-solid fa-building-user"></i>
+                <i className="fa-solid fa-heart"></i>
                 <span>60 people are interested</span>
               </div>
               <div className="dots">

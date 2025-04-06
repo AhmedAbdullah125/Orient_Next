@@ -13,7 +13,7 @@ export default function Footer() { // Defining the main functional component nam
     const [lang, setLang] = useState('en')
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            if (localStorage.getItem('lang') === 'ar' || localStorage.getItem('lang') === 'en') {
+            if (localStorage.getItem('lang') === 'amh' || localStorage.getItem('lang') === 'en') {
                 setLang(localStorage.getItem('lang'));
             }
             else {
@@ -68,7 +68,7 @@ export default function Footer() { // Defining the main functional component nam
     // }, [contactData]); // Runs when `contactData` updates
 
     return (
-        <footer id='footer' style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}> {/* Main footer container with padding and background color */}
+        <footer id='footer'> {/* Main footer container with padding and background color */}
 
 
             <Link href={`https://wa.me/+201013644154?text=Good%20Morning%20Oreient`} target="_blank" className="fixed-what">
